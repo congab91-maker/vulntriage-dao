@@ -33,8 +33,10 @@ test("server-renders the VulnTriage product and demo disclosure", async () => {
   assert.match(html, /Security verdicts/);
   assert.match(html, /DEMO DATA/);
   assert.match(html, /No contract is connected/);
+  assert.match(html, /NOT CONNECTED/);
   assert.match(html, /temporary persistence/);
   assert.match(html, /simulated transfers/);
+  assert.doesNotMatch(html, /NOT DEPLOYED/);
   assert.doesNotMatch(html, /Live queue · synced/i);
   assert.doesNotMatch(html, /Pool locked ·/i);
   assert.doesNotMatch(html, /Appeal submitted/i);

@@ -219,7 +219,7 @@ export default function Home() {
           <div className="metric-foot"><span>Independent rerun</span><span>Exact decision match</span></div>
         </article>
         <article className="metric-card metric-note">
-          <div className="metric-top"><span>LIVE CONTRACT</span><Pill tone={contractConfigured ? "amber" : "neutral"}>{contractConfigured ? "API PENDING" : "NOT DEPLOYED"}</Pill></div>
+          <div className="metric-top"><span>LIVE CONTRACT</span><Pill tone={contractConfigured ? "amber" : "neutral"}>{contractConfigured ? "API PENDING" : "NOT CONNECTED"}</Pill></div>
           <div className="policy-copy">Severity uses public evidence. Researcher reputation is excluded from judgment.</div>
           <div className="metric-foot"><span>Target</span><span>Studionet · 61999</span></div>
         </article>
