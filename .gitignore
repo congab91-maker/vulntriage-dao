@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+artifacts/
+
+# Node and framework output
+node_modules/
+.next/
+dist/
+.wrangler/
+*.tsbuildinfo
+
+# Local deployment state and archives
+.vercel/
+*.tar.gz
+.rpc-debug.json
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
