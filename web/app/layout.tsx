@@ -4,34 +4,21 @@ import "./globals.css";
 const productionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    productionHost
-      ? `https://${productionHost}`
-      : "https://vulntriage-dao.lovely-krill-7694.chatgpt.site",
-  ),
-  title: "VulnTriage DAO — Evidence-backed security adjudication",
+  metadataBase: productionHost ? new URL(`https://${productionHost}`) : undefined,
+  title: "VulnTriage DAO | Evidence-backed security adjudication",
   description:
-    "A GenLayer-powered public evidence workflow for fair vulnerability bounty decisions.",
+    "A GenLayer Studionet application for consensus-based vulnerability bounty decisions grounded in public reports and official evidence.",
   openGraph: {
-    title: "VulnTriage DAO — Evidence-backed security adjudication",
+    title: "VulnTriage DAO | Evidence-backed security adjudication",
     description:
-      "A GenLayer-powered public evidence workflow for fair vulnerability bounty decisions.",
+      "Consensus-based vulnerability bounty decisions grounded in public reports and official evidence.",
     type: "website",
-    images: [
-      {
-        url: "/og.png",
-        width: 1600,
-        height: 900,
-        alt: "VulnTriage DAO — Security verdicts, backed by evidence.",
-      },
-    ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "VulnTriage DAO — Evidence-backed security adjudication",
+    card: "summary",
+    title: "VulnTriage DAO | Evidence-backed security adjudication",
     description:
-      "A GenLayer-powered public evidence workflow for fair vulnerability bounty decisions.",
-    images: ["/og.png"],
+      "Consensus-based vulnerability bounty decisions grounded in public reports and official evidence.",
   },
   icons: {
     icon: "/favicon.svg",
@@ -39,14 +26,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="en"><body>{children}</body></html>;
 }

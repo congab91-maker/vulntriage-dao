@@ -15,6 +15,7 @@ dist/
 .vercel/
 *.tar.gz
 .rpc-debug.json
+.internal/
 
 # Environment and credentials
 .env
